@@ -1,0 +1,562 @@
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    src: url('./fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    src: url('./fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 900;
+    src: url('./fonts/Roboto-Black.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font: 18px 'Roboto', sans-serif;
+    color: #000;
+}
+
+body {
+    background: #fafafa;
+    margin: 0;
+}
+
+.main-doc {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.main-doc-with-sidebar {
+    margin-left: 250px;
+}
+
+article {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px 0px #878787;
+}
+
+section {
+    margin: 50px 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.55rem;
+}
+
+.big-h1 {
+    font-size: 2.77rem;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 1.33rem;
+}
+
+h3 {
+    font-size: 1.11;
+}
+
+a, a:visited {
+    color: #00f;
+}
+
+p {
+    margin: 10px 0;
+    text-align: justify;
+    text-indent: 3rem;
+}
+
+p * {
+    text-indent: initial;
+}
+
+details {
+    margin: 20px 0;
+}
+
+summary {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 0.77rem;
+}
+
+td {
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px 0px #878787;
+}
+
+footer {
+    margin-top: 50px;
+    box-shadow: 5px 5px 10px 0px #878787;
+    background-color: #fff;
+    padding: 15px;
+    font-size: 0.8rem;
+}
+
+footer .container {
+    display: flex;
+    justify-content: end;
+}
+
+footer li {
+    margin: 5px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+header nav a {
+    color: #000;
+}
+
+header .nav-link {
+    color: #000;
+}
+
+.page-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 9;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px 0px #878787;
+}
+
+.page-nav ul {
+    padding: 110px 20px 20px;
+}
+
+.page-nav .aside-link {
+    display: block;
+    margin: 10px 0;
+    font-size: 0.77rem;
+    color: #000;
+}
+
+.page-nav .aside-link-active {
+    font-weight: 700;
+}
+
+.img-in-text-to-right {
+    float: right;
+    padding: 20px;
+    padding-right: 0;
+}
+
+.img-in-text-to-left {
+    float: left;
+    padding: 20px;
+    padding-left: 0;
+}
+
+.footnote {
+    position: relative;
+    color: #f00;
+    cursor: pointer;
+    display: inline-block;
+    width: 0.5rem;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.footnote-anchor {
+    position: absolute;
+    top: -14px;
+    left: -6px;
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    transform-origin: 0.5rem 0.4rem;
+    animation: 2s linear infinite rotate;
+}
+
+.footnote:hover .footnote-content {
+    display: block;
+}
+
+.footnote-content {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 999;
+    max-width: 350px;
+    background: #222;
+    padding: 10px;
+    color: #fff;
+    font-size: 0.9rem;
+    box-shadow: 5px 5px 10px 0px #878787;
+    cursor: default;
+    text-align: left;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.bold-text {
+    font-weight: 700;
+}
+
+.underline-text {
+    text-decoration: underline;
+}
+
+.subtitle-row {
+    font-size: 1rem;
+}
+
+.dark-cell {
+    background-color: #000;
+    color: #fff
+}
+
+.alternate-row {
+    background-color: #dcdcdc;
+}
+
+.coords {
+    font-size: 1.66rem;
+    font-weight: 700;
+}
+
+.map {
+    width: 100%;
+}
+
+blockquote {
+    text-align: center;
+    font-style: italic;
+}
+
+.icon {
+    height: 18px;
+    vertical-align: middle;
+}
+
+.field-content {
+    display: flex;
+}
+
+.field-content p,
+.shop-content p {
+    text-indent: 0;
+}
+
+.characters {
+    max-width: 400px;
+    margin-left: 25px;
+    border-left: 1px solid #878787;
+    padding-left: 25px;
+}
+
+.characters li {
+    display: flex;
+    width: 200px;
+    margin-bottom: 25px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.role-description {
+    font-size: 0.75rem;
+}
+
+.role-description span {
+    font-size: 0.83rem;
+}
+
+.address-title {
+    font-weight: 400;
+    font-size: 1.1rem;
+    text-align: left;
+    text-indent: 3rem;
+}
+
+.shop-content h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    word-break: break-word;
+}
+
+.products {
+    display: flex;
+    gap: 3.5%;
+}
+
+.product-card,
+.product-description {
+    border: 1px solid #878787;
+    padding: 10px;
+}
+
+.product-card {
+    position: relative;
+    cursor: pointer;
+    width: 31%;
+    background: #fff;
+}
+
+.product-card.shown-product::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 20px solid transparent;
+    border-top-color: #878787;
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 225px;
+}
+
+.product-description {
+    display: none;
+    margin: 20px 0;
+}
+
+.product-description.show-product-description {
+    display: block;
+}
+
+.product-price {
+    position: absolute;
+    right: -10px;
+    bottom: -30px;
+    transform: rotate(-30deg);
+}
+
+.label-string {
+    position: absolute;
+    top: -20px;
+    left: 6px;
+    z-index: 1;
+    width: 20px;
+    height: 40px;
+    border: 1px solid #878787;
+    border-radius: 50%;
+}
+
+.label-string::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.label {
+    position: relative;
+    z-index: 2;
+    border: 1px solid #878787;
+    padding: 5px 10px;
+    background: #ffffff;
+    color: #20a320;
+    font-weight: 900;
+}
+
+.sound {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.intersection-title {
+    margin: 40px 0;
+}
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+
+    .page-nav {
+        width: 175px;
+    }
+
+    .main-doc-with-sidebar {
+        margin-left: 175px;
+    }
+}
+
+@media screen and (max-width: 745px) {
+    html {
+        font-size: 14px;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+
+    .main-doc {
+        margin-top: 65px;
+    }
+
+    .main-doc-with-sidebar {
+        margin-top: 125px;
+        margin-left: 0;
+    }
+
+    .page-nav {
+        top: 45px;
+        bottom: auto;
+        left: 0;
+        width: 100%;
+    }
+
+    .page-nav ul {
+        display: flex;
+        padding: 15px;
+        padding-top: 30px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .page-nav ul li {
+        padding: 0 10px;
+    }
+
+    section {
+        margin: 25px 0;
+    }
+
+    .shop-content h2 {
+        font-size: 0.85rem;
+    }
+
+    .product-card {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .main-doc {
+        margin-top: 85px;
+    }
+
+    .main-doc-with-sidebar {
+        margin-top: 145px;
+    }
+
+    .page-nav ul {
+        padding-top: 45px;
+    }
+
+    .field-content {
+        flex-direction: column;
+    }
+
+    .characters {
+        max-width: none;
+        border-left: none;
+        margin-top: 35px;
+        border-top: 1px solid #878787;
+        padding-top: 35px;
+    }
+
+    .shop-content h2 {
+        font-size: 0.65rem;
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-doc {
+        margin-top: 80px;
+    }
+
+    footer {
+        margin-top: 15px;
+    }
+
+    .main-doc-with-sidebar {
+        margin-top: 140px;
+    }
+
+    .page-nav ul {
+        padding-top: 40px;
+    }
+
+    .img-in-text-to-right,
+    .img-in-text-to-left {
+        max-width: 175px;
+    }
+
+    header nav ul {
+        gap: 10px;
+    }
+
+    .product-card {
+        padding: 5px;
+    }
+}
