@@ -432,6 +432,34 @@ blockquote {
     margin: 40px 0;
 }
 
+.channel-link {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: grey;
+}
+
+.channel-link:visited {
+    color: grey;
+}
+
+.channel-link svg {
+    height: 18px;
+    width: 27px;
+    fill: grey;
+}
+
+.channel-link:hover {
+    color: red;
+}
+
+.channel-link:hover svg {
+    fill: red;
+}
+
 @media screen and (max-width: 1024px) {
     html {
         font-size: 16px;
